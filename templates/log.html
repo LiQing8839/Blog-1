@@ -1,0 +1,35 @@
+{% extends "base3.html" %}
+{% block title %}
+
+<div class="panel panel-primary col-md-8 col-md-offset-2">
+{% for each in blogs %}
+   <div class="panel-heading">
+      <h3 class="panel-title">{{ each.caption }}</h3>
+   </div>
+   <div class="panel-body">
+     {{each.content}}
+    <div class = "col-md-offset-10">
+   <br>
+         --made by <b>{{each.author}}</b>
+         <br>
+         {{each.create_time}}
+      </div>
+   <hr color = "blue" size = "1"></hr>
+   <div id = ></div>
+   </div>
+{% endfor %}
+<div>
+  <ul id="pagination-digg">
+    <li class="previous-off">&laquo;Previous</li>
+      <li class="active">1</li>
+      <li><a href="2">2</a></li>
+      <li><a href="3">3</a></li>
+      <li><a href="4">4</a></li>
+      <li><a href="5">5</a></li>
+      <li><a href="6">6</a></li>
+      <li><a href="7">7</a></li>
+      <li class="next"><a href="?page=8">Next &raquo;</a></li>
+  </ul>
+</div>
+</div>
+{% endblock %}

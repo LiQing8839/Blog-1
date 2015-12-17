@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+<link rel="shortcut icon" href="/static/bitbug_favicon.ico">
+    <title>
+        Panda—Blog
+    </title>
+<link rel="stylesheet" href="/static/css/pagination.css">
+<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+<style type="text/css">
+    /*#header{width:100%; height:100px; position:absolute; top:-10px;}
+    #footer{width:100%;  position:absolute; bottom:0px;}*/
+    #content{width:100%; height: 1000px; top:72px; bottom:120px;}
+</style>
+</head>
+<body background = "/static/1.jpg" >
+<div id = "header">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container col-md-11 col-md-offset-1">
+        <div class="navbar-header ">
+             <a class="navbar-brand" href="/app/main/">Pikachu</a>
+        </div>
+
+    <div class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+      <li></li>
+      <li class="active"><a href="/app/main/">主页</a></li>
+      <li><a href="/app/host/">主机信息</a></li>
+      <li><a href="/app/chat/">聊天室</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+      <li id="signin_icon"><a href="/app/register/">注册</a></li
+      </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+      <li id="signin_icon"><a href="/app/login/">登录</a></li>
+      </ul>
+    </div>
+      <div class = "row"></div>
+        <div class = "col-sm-offset-11">
+          <span id=localtime></span>
+      </div>
+</nav>
+</div>
+<div id = "content">
+<div class = "col-md-offset-1"><h4>Welcome  <b>{{username}}!</b></h4></div>
+ {%block title %}
+ {% endblock %}
+ </div>
+<div  id = "footer" style="background:#384452 none repeat scroll 0% 0%;color:#BFC9D3" class = "footer col-md-12">
+  <div class="container">
+    <div class="row" style="padding-top:5px;">
+      <div class="col-md-7">
+        <p class="lead"> Designed and built by the <a href="/app/about/">Fan</a>.</p>        
+      </div>
+      <div class="col-md-5">
+        <div>
+          <h5 style="margin-bottom:5px;margin-left:18px;"><strong>CONTACT ME</strong></h5>
+          <ul>
+            <li></span>&nbsp; Email:<strong> FantasRu@Gmail.com</strong></a></li> 
+            <li><!-- <a href="#" aria-hidden="true"> --></span>&nbsp; QQ:<strong> 935813777</strong></a></li>                        
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <p> <small>© COPYRIGHT BY FanRu 2015</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+ <script src="/static/bootstrap/js/jquery-2.1.4.min.js"></script>
+ <script src="/static/bootstrap/js/bootstrap.js"></script>
+ <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+ <script src="/static/bootstrap/js/jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+  function showLocale(objD)
+{
+var str,colorhead,colorfoot;
+var yy = objD.getYear();
+if(yy<1900) yy = yy+1900;
+var MM = objD.getMonth()+1;
+if(MM<10) MM = '0' + MM;
+var dd = objD.getDate();
+if(dd<10) dd = '0' + dd;
+var hh = objD.getHours();
+if(hh<10) hh = '0' + hh;
+var mm = objD.getMinutes();
+if(mm<10) mm = '0' + mm;
+var ss = objD.getSeconds();
+if(ss<10) ss = '0' + ss;
+var ww = objD.getDay();
+if ( ww==0 ) colorhead="<font color=white>";
+if ( ww > 0 && ww < 6 ) colorhead="<font color=white>";
+if ( ww==6 ) colorhead="<font color=white>";
+if (ww==0) ww="星期日";
+if (ww==1) ww="星期一";
+if (ww==2) ww="星期二";
+if (ww==3) ww="星期三";
+if (ww==4) ww="星期四";
+if (ww==5) ww="星期五";
+if (ww==6) ww="星期六";
+colorfoot="</font>"
+str = colorhead + "&nbsp;&nbsp;&nbsp;&nbsp;" + hh + ":" + mm + ":" + ss + colorfoot;
+
+// str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + " " + ww + colorfoot;
+return(str);
+}
+  function tick()
+{
+var today;
+today = new Date();
+document.getElementById("localtime").innerHTML = showLocale(today);
+window.setTimeout("tick()", 1000);
+}
+tick();
+
+</script>
+</body>
+</html>
