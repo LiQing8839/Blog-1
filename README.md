@@ -12,4 +12,4 @@
 
 ###预览
 ######beta1.0
-![image]("https://github.com/FantasRu/Blog_django/blob/master/beta.png")
+![image](https://github.com/FantasRu/Blog_django/blob/master/beta.png)
