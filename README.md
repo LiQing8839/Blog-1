@@ -11,5 +11,5 @@
 
 
 ###预览
-
-![image]("")
+######beta1.0
+![image]("https://github.com/FantasRu/Blog_django/blob/master/beta.png")
