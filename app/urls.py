@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^hello/',  hello),
     url(r'^main/',  main),
     url(r'^board/',  board),
-    url(r'^log/',  log),
+    url(r'^article/',  article),
 
 ]

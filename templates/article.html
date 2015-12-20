@@ -1,18 +1,16 @@
-{% extends "base3.html" %}
+{% extends "base.html" %}
 {% block title %}
 
 <div class="panel panel-primary col-md-8 col-md-offset-2">
 {% for each in blogs %}
    <div class="panel-heading">
-      <h3 class="panel-title">{{ each.caption }}</h3>
+      <h3 class="panel-title">{{ each.title }}</h3>
    </div>
    <div class="panel-body">
      {{each.content}}
-    <div class = "col-md-offset-10">
-   <br>
-         --made by <b>{{each.author}}</b>
-         <br>
-         {{each.create_time}}
+    <div class = "col-md-offset-9">
+
+         {{each.date_time}}
       </div>
    <hr color = "blue" size = "1"></hr>
    <div id = ></div>

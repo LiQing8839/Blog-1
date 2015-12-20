@@ -13,12 +13,12 @@ def hello(request):
 
 
 def main(request):
-	return render_to_response("base3.html")
+	return render_to_response("base.html")
 
 
 def board(request):
-	pass
+	return render_to_response("test.html")
 
-def log(request):
+def article(request):
     blogs = Article.objects.all()  #获取全部的Article对象
-    return render(request, 'log.html', {'blogs' : blogs}) 
+    return render(request, 'article.html', {'blogs' : blogs}) 
